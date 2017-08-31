@@ -1,0 +1,5 @@
+有些笔记本使用的synaptics触摸板，驱动不支持插入鼠标自动禁用触控板。可以使用注册表的方式修改使其支持此功能。
+1、正常情况
+修改HKEY_CURRENT_USER/Software/Synaptics/SynTPEnh下面DisableIntPDFeature选项的十六进制数值数据为33，默认是11.修改完成后重启触摸板相关进程就可以看到选项，使其生效。
+2、如果第一种情况没有起作用在上述位置新建一个DWORD（32位-值）修改名称为Showdisableicon值为1
+3、如果是ThinkPad的小红点在同样位置SynTPEnh下有个文件夹为UltraNavPS2，修改其中TrackPointModeFunction默认十六进制11改为33，如果没生效参见第二条新建showdisableicon值并修改。
