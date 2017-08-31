@@ -1,6 +1,6 @@
-
+```现在由于微软不在强制推送win10更新，所以，此文件意义不是很大了。
 如果win7出现全屏升级windows10页面，卸载补丁3035583即可
 
 如何禁用win10升级提醒
 HKEY_LOCAL_MACHINE \SOFTWARE\Policies\Microsoft\Windows\Gwx，新建一个DWORD（32位）值，重命名为DisableGwx，双击新建的值，将“数值数据”修改为“1”，点击“确定”即可
-现在由于微软不在强制推送win10更新，所以，此文件意义不是很大了。
+
