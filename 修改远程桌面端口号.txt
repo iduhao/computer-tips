@@ -1,4 +1,4 @@
-1¡¢·À»ğÇ½ÖĞÔÊĞíÍ¨¹ıÒªÊ¹ÓÃµÄ¶Ë¿ÚºÅ£¬
-2¡¢ĞŞ¸Ä×¢²á±íÎ»ÖÃ:
-	 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp] PortNumberÖµ£¬Ä¬ÈÏÊÇ3389£¬ĞŞ¸Ä³ÉËùÏ£ÍûµÄ¶Ë¿Ú
-	 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp] PortNumberÖµ£¬Ä¬ÈÏÊÇ3389,ĞŞ¸Ä³ÉĞèÒªµÄ¶Ë¿Ú
+1ã€é˜²ç«å¢™ä¸­å…è®¸é€šè¿‡è¦ä½¿ç”¨çš„ç«¯å£å·ï¼Œ
+2ã€ä¿®æ”¹æ³¨å†Œè¡¨ä½ç½®:
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp] PortNumberå€¼ï¼Œé»˜è®¤æ˜¯3389ï¼Œä¿®æ”¹æˆæ‰€å¸Œæœ›çš„ç«¯
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp] PortNumberå€¼ï¼Œé»˜è®¤æ˜¯3389,ä¿®æ”¹æˆéœ€è¦çš„ç«¯å£
