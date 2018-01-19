@@ -1,0 +1,3 @@
+在使用火狐的时候经常会出现应用程序异常 unknown XXXXX 之类的
+打开c:\windows\system32\drivers\bd001.sys，进入安全模式，删掉重启即可
+这是百度的一个文件。辣鸡百度。
