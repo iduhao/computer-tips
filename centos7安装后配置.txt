@@ -1,0 +1,67 @@
+使用习惯配置
+    配置网络
+        vi /etc/sysconfig/network-scripts/ifcfg-eth0,0是网卡编号，不同设备编号不同。
+        然后设置网络
+    更新仓库和软件
+        yum -y install update
+        yum -y install upgrade
+    更换源
+    备份当前源
+            mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak
+        下载新源并移动到/etc/yum.repo.d/下面(已阿里云源为例)
+            wget -O /etc/yum.repo.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+        清理缓存
+            yum makecache
+    配置终端别名
+        打开.bashrc 文件添加
+            alias vi = 'vim'
+    修改登录显示
+        打开.bashrc_profile
+            echo '=============OS============================================'
+            cat /etc/redhat-release
+            echo '=============DISK============================================'
+            df -lh
+            echo '=============MEMORY============================================'
+            free -h
+            echo '=============STATUS============================================'
+            uptime
+            echo '========================================================='
+    安装gcc编译软件
+        yum -y install gcc
+    设置git自动显示当前分支
+        打开.bashrc文件
+        fi
+        function git-branch-name {
+            git symbolic-ref HEAD 2>/dev/null | cut -d"/" -f 3
+        }
+        function git-branch-prompt {
+                local branch=`git-branch-name`
+                if [ $branch ]; then printf " [%s]" $branch; fi
+        }
+        PS1="\u@\h \[\033[0;36m\]\w\[\033[0m\]\[\033[0;32m\]\$(git-branch-prompt)\[\033[0m\] \$ "
+    设置git自动补全
+        1、首先在GitHub上下载git源文件 
+        git clone https://github.com/git/git 
+        2、找到git-completion.bash并复制git-compeition.bash文件到当前用户目录并隐藏
+        cp git/contrib/completion/git-completion.bash ~/.git-completion.bash	
+        3、打开当前用户的.bashrc文件，在文件末尾添加指向文件
+        vi .bashrc
+        source ~/.git-completion.bash
+        4、保存并退出，重新登陆即可在git命令中使用TAB键进行命令补全
+安全配置
+    新建个人使用账户，加入到root组
+        useradd user   新建用户
+        password user  设置密码
+        gpasswd -a user root    添加到root组
+        赋予root权限
+        vi /etc/sudoers
+        user    ALL=(ALL)       ALL
+    禁止root通过ssh登录，并修改ssh端口号
+    修改vi /etc/ssh/sshd_config 文件
+    修改默认端口：默认Port为22,并且已经注释掉了；修改是把注释去掉，并修改成其它的端口。
+    禁止root用户远程登陆：修改PermitRootLogin，默认为yes且注释掉了；修改是把注释去掉，并改成no。
+    PermitEmptyPasswords   no不允许空密码用户login
+    根据需要配置防火墙
+
+  
+   
