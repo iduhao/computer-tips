@@ -60,7 +60,7 @@
     修改vi /etc/ssh/sshd_config 文件
     修改默认端口：默认Port为22,并且已经注释掉了；修改是把注释去掉，并修改成其它的端口。
     禁止root用户本地登录：修改/etc/pam.d/login，首行添加auth required pam_succeed_if.so user != root quiet
-    禁止root用户远程登陆：修改PermitRootLogin，默认为yes且注释掉了；修改是把注释去掉，并改成no。
+    禁止root用户远程登陆：/etc/ssh/sshd_config文件修改PermitRootLogin，默认为yes且注释掉了；修改是把注释去掉，并改成no。
     PermitEmptyPasswords   no不允许空密码用户login
     根据需要配置防火墙
 
