@@ -9,13 +9,13 @@ cd /usr/local/
 删除Homebrew文件夹及子文件夹
 brew help 发现没有homebrew，已经卸载完成。
 
-下载安装脚本（需翻墙）
+如果网络不好，下载安装脚本（需翻墙）
 https://raw.githubusercontent.com/Homebrew/install/master/install.sh
 修改安装脚本镜像源为阿里云
-BREW_REPO = &quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&quot;
+BREW_REPO = https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
 改成
-BREW_REPO = &quot;https://mirrors.aliyun.com/homebrew/brew.git&quot;
-CORE_TAP_REPO=&quot;https://mirrors.aliyun.com/homebrew/homebrew-core.git&quot;
+BREW_REPO = https://mirrors.aliyun.com/homebrew/brew.git
+CORE_TAP_REPO=https://mirrors.aliyun.com/homebrew/homebrew-core.git
 然后安装
 /bin/bash install.sh 安装即可。中途下载花费的时间较长
 初次安装可能会需要更新Xcode命令行工具箱。
