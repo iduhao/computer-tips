@@ -1,0 +1,31 @@
+macos 安装homebrew 及更换安装源
+终端执行
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+中途如果提示更新command line tools for xcode 要更新。
+
+删除homebrew
+cd /usr/local/
+查看Homebrew文件夹
+删除Homebrew文件夹及子文件夹
+brew help 发现没有homebrew，已经卸载完成。
+
+下载安装脚本（需翻墙）
+https://raw.githubusercontent.com/Homebrew/install/master/install.sh
+修改安装脚本镜像源为阿里云
+BREW_REPO = &quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&quot;
+改成
+BREW_REPO = &quot;https://mirrors.aliyun.com/homebrew/brew.git&quot;
+CORE_TAP_REPO=&quot;https://mirrors.aliyun.com/homebrew/homebrew-core.git&quot;
+然后安装
+/bin/bash install.sh 安装即可。中途下载花费的时间较长
+初次安装可能会需要更新Xcode命令行工具箱。
+
+
+
+更换国内安装源
+# 替换brew.git cd "$(brew --repo)" 
+git remote set-url origin https://mirrors.aliyun.com/homebrew/brew.git 
+# 替换homebrew-core.git 
+cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core" 
+git remote set-url origin https://mirrors.aliyun.com/homebrew/homebrew-core.git 
+# 刷新源 brew update
