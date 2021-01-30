@@ -1,0 +1,9 @@
+问题
+ windows 10 桌面图标和任务栏闪烁。打开任务管理器，查看 Windows 资源管理器占用cpu过高。
+ 解决方案
+ 怀疑是安装软件后，系统和软件争夺默认打开方式的控制权。
+ 1、首先在设置，应用，默认设置里恢复初始设置。如未解决，继续执行下面的操作
+ 2、打开注册表编辑器，定位到
+ HKEY_CURRENT_USER\SOFTWARE\MICROSOFT\WINDOWS\currentversion\Explorer\FileExts
+ 将该项和所有子项备份。打开任务管理器，重启windows资源管理器进程。删掉FileExts下面所有子项。然后重启电脑。
+ 该注册表估计是设置所有扩展名的打开方式。删掉重启后会重新初始化。初始化完成后正常
